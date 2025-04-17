@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Vite configuration for production deployment
 export default defineConfig({
   plugins: [react()],
   build: {
@@ -12,5 +12,5 @@ export default defineConfig({
   },
   preview: {
     allowedHosts: ['divinemyst.onrender.com'], // Add your Render host here
-  },
+  }
 })
