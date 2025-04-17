@@ -9,6 +9,8 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true, // for handling SPA routing
+    host: '0.0.0.0',          // Bind to all network interfaces
+    port: 10000,              // Ensure the port is set to 10000
   },
   preview: {
     allowedHosts: ['divinemyst.onrender.com'], // Add your Render host here
