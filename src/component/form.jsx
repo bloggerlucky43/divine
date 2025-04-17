@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-// const bApp="http://localhost:5000"
+const bApp="https://divinebackend.onrender.com"
 
 const stripePromise = loadStripe('pk_test_51OBvIaERzzYl3tbOMxy92GDPsSG8rLcwCfH14GlQQzJbB8QYY5ZSftts9fEz1KI7aJ6iFzgKjdALWLgsiDoUeVOs00hpuBwAdM');
 
@@ -32,7 +32,7 @@ const Form = () => {
 
     
 
-    const res=await fetch(`/create-checkout-session`,{
+    const res=await fetch(`${bApp}/create-checkout-session`,{
       method:'POST',
       headers:{"Content-Type":'application/json'},
       body: JSON.stringify(formData)

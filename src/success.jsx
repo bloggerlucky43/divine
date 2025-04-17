@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// const bApp="http://localhost:5000"
+const bApp="https://divinebackend.onrender.com"
 
 const SuccessPage = () => {
   const [divineMessage, setDivineMessage] = useState('');
@@ -13,7 +13,7 @@ const SuccessPage = () => {
     const sessionId = new URLSearchParams(window.location.search).get('session_id');
   
     if (sessionId) {
-      fetch(`/verify-payment?session_id=${sessionId}`)
+      fetch(`${bApp}/verify-payment?session_id=${sessionId}`)
         .then(res => res.json())
         .then(data => {
           if (data.success) {
