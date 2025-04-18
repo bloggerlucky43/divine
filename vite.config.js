@@ -13,6 +13,6 @@ export default defineConfig({
     port: 10000,              // Ensure the port is set to 10000
   },
   preview: {
-    allowedHosts: ['divinemyst.life'], // Add your Render host here
+    allowedHosts: ['www.divinemyst.life','divinemyst.life], // Add your Render host here
   }
 })
