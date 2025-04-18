@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 const bApp="https://divinebackend.onrender.com"
+// const bApp="http://localhost:5000"
 
 const stripePromise = loadStripe('pk_test_51OBvIaERzzYl3tbOMxy92GDPsSG8rLcwCfH14GlQQzJbB8QYY5ZSftts9fEz1KI7aJ6iFzgKjdALWLgsiDoUeVOs00hpuBwAdM');
 
@@ -12,12 +13,15 @@ const Form = () => {
   const [desire, setDesire] = useState("");
   const [gender, setGender] = useState("");
   const [sign, setSign] = useState("");
+  const [loading,setLoading]=useState(false);
 
   const handlePayment=async(e)=>{
     e.preventDefault();
+    setLoading(true)
 
     if (!dob || !name || !location || !desire || !gender || !sign) {
       alert("Please fill in all the fields before proceeding to payment!");
+      setLoading(false)
       return;
     }
     
@@ -147,9 +151,25 @@ const Form = () => {
             </select>
           </div>
 
-          <button type="submit" onClick={handlePayment} className="start-btn">
-          Get My Divine Message
-          </button>
+          <button
+  type="submit"
+  onClick={handlePayment}
+  className="start-btn"
+  disabled={loading}
+>
+  {loading ? (
+    <>
+      <span
+        className="spinner-border spinner-border-sm me-2"
+        role="status"
+        aria-hidden="true"
+      ></span>
+      Processing...
+    </>
+  ) : (
+    "Get My Divine Message"
+  )}
+</button>
         </form>
       </div>
 

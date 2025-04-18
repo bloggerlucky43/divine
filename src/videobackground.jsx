@@ -1,8 +1,15 @@
-import React from "react";
+import React ,{useRef}from "react";
 import Form from "./component/form";
 
 
 const VideoBackground=()=>{
+    const formRef=useRef(null);
+
+    const handleScrollView=()=>{
+        if(formRef.current){
+            formRef.current.scrollIntoView({behavior:'smooth'});
+        }
+    }
     return (
         <div className="video-container">
             <video className="video-background"  autoPlay loop muted>
@@ -18,12 +25,12 @@ const VideoBackground=()=>{
   Tap into Your Divine Secret Power — Discover the Purpose Hidden Within You.
 </p>
 <div className="button">
-<button className="start-btn">Reveal My Divine Insight</button>
+<button className="start-btn" onClick={handleScrollView}>Reveal My Divine Insight</button>
 
 </div>
 
             </div>
-            <div className="container next-container">
+            <div className="container next-container" ref={formRef}>
                 <Form />
 
             </div>
