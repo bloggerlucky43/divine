@@ -12,8 +12,8 @@ const VideoBackground=()=>{
     }
     return (
         <div className="video-container">
-            <video className="video-background"  autoPlay loop muted>
-                <source src="/videos/170246-843069659.mp4" type="video/mp4" />
+            <video className="video-background"  autoPlay loop muted preload="auto" poster="/images/poster.PNG">
+                <source src="/videos/170246-843069659_small.mp4" type="video/mp4" />
                 Your browser does not support video tag
             </video>
 
