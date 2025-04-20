@@ -52,6 +52,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
+  text-shadow: 0 0 8px rgba(0, 0, 200, 0.6);
   /* text-shadow: 0 0 8px rgba(0,0,0,1); */
   line-height: 1.6;
   animation: fadeInUp 1.5s ease forwards;
@@ -179,7 +180,10 @@ h1 {
   from { opacity: 1; transform: scale(1); }
   to { opacity: 0; transform: scale(0.95); }
 }
-
+.home-btn{
+  justify-self: center;
+  margin-bottom: 4vh;
+}
 @media screen and (max-width: 600px) {
   .video-background{
     object-fit: cover;

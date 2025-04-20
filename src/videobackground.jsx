@@ -1,6 +1,12 @@
 import React ,{useRef}from "react";
 import Form from "./component/form";
 
+// const images=[
+//     {src:"/images/a.jpg" , alt:'beauty'},
+//     {src:"/images/b.jpg" , alt:'Nice'},
+//     {src:"/images/c.jpg" , alt:'Handsome'},
+//     {src:"/images/d.jpg" , alt:'FIne'},
+// ]
 
 const VideoBackground=()=>{
     const formRef=useRef(null);
@@ -22,18 +28,30 @@ const VideoBackground=()=>{
                     <h1 className="m-xl-3 "><span className="logo">D</span>ivine<span className="logo">M</span>yst</h1>
                 </div>
                 <p className="subheading mt-xl-4">
-  Tap into Your Divine Secret Power — Discover the Purpose Hidden Within You.
+  Tap into Your Spirit
+</p>
+                <p className="subheading mt-xl-4 fs-4">
+                Embrace your ascension
 </p>
 <div className="button">
-<button className="start-btn" onClick={handleScrollView}>Reveal My Divine Insight</button>
+<button className="start-btn" onClick={handleScrollView}>Awaken Your Spiritual Purpose</button>
 
 </div>
 
             </div>
             <div className="container next-container" ref={formRef}>
                 <Form />
-
             </div>
+            {/* <div className="images-container">
+                <h1>Check out some images below</h1>
+                <div className="gallery">
+                    {images.map((img,index)=>(
+                        <div className="gallery-items">
+                            <img src={img.src} alt={img.alt} />
+                        </div>
+                    ))}
+                </div>
+            </div> */}
            
             
         </div>

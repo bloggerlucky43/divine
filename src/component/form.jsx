@@ -65,7 +65,7 @@ const Form = () => {
             <label>Date of Birth</label>
             <input
               type="date"
-              placeholder="mm/dd/yyyy"
+              placeholder="Date of Birth"
               className="form-control"
               required
               value={dob}
@@ -77,7 +77,7 @@ const Form = () => {
             <label>Your Name:</label>
             <input
               type="text"
-              placeholder="Cynthia"
+              placeholder="Name for spiritual decoding"
               className="form-control"
               required
               value={name}
@@ -86,11 +86,11 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Location Area</label>
+            <label>Country of Birth</label>
             <input
               type="text"
               className="form-control"
-              placeholder="e.g., California, USA"
+              placeholder="Country of Birth/Mother's origin"
               required
               value={location}
               onChange={(e) => setLocation(e.target.value)}
@@ -98,7 +98,7 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Highest Desire Now</label>
+            <label>Highest Aspiration</label>
             <select
               className="form-control"
               required
@@ -121,7 +121,7 @@ const Form = () => {
               value={gender}
               onChange={(e) => setGender(e.target.value)}
             >
-              <option value="">Select</option>
+              <option value="">Born as</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
@@ -135,7 +135,7 @@ const Form = () => {
               value={sign}
               onChange={(e) => setSign(e.target.value)}
             >
-              <option value="">Select</option>
+              <option value="">Sign</option>
               <option value="aries">Aries</option>
               <option value="taurus">Taurus</option>
               <option value="gemini">Gemini</option>
@@ -167,7 +167,7 @@ const Form = () => {
       Processing...
     </>
   ) : (
-    "Get My Divine Message"
+    "Get My Divine Spirit"
   )}
 </button>
         </form>

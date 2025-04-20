@@ -91,10 +91,14 @@ const SuccessPage = () => {
     setTimeout(() => setShowModal(false), 500);
   };
 
+  const handleClickEvent=()=>{
+    navigate('/')
+  }
+
   return (
     <div className="video-container">
-      <video className="video-background" autoPlay loop muted>
-        <source src="/videos/170246-843069659.mp4" type="video/mp4" />
+      <video className="video-background" autoPlay loop muted preload="auto" poster="/images/poster.PNG">
+        <source src="/videos/170246-843069659_small.mp4" type="video/mp4" />
         Your browser does not support the video tag
       </video>
 
@@ -137,12 +141,19 @@ const SuccessPage = () => {
           <div className="spinner-border text-success" role="status"></div>
         ) : (
           <div>
-            <h3>Your DivineMyst Message:</h3>
+            <h3>Your DivineMyst Spirit:</h3>
             <div className="divine-container">
               {imageUrl && (
                 <img src={imageUrl} alt="Divine visual" className="divine" loading="lazy" />
               )}
               <p>{divineMessage}</p>
+              <div className="home-btn">
+                <button className="start-btn"
+                onClick={handleClickEvent}
+                >
+                  Go To HomePage
+                  </button>
+              </div>
             </div>
           </div>
         )}
