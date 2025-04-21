@@ -44,18 +44,21 @@ const VideoBackground=()=>{
                 <Form />
             <div className="images-container">
                 <h1>Spiritual Travels</h1>
-                <p className="text-image">Come on! Travel!</p>
+                
                 <div className="gallery">
                 {images.map((img, index) => (
   <div className="gallery-items" key={index}>
     <img
       src={img.src}
       alt={img.alt}
-      onContextMenu={(e) => e.preventDefault()} />
+      onContextMenu={(e) => e.preventDefault()}
+      className={`${index === 0 ? "selected" : ""}`}
+      />
   </div>
 ))}
 
                 </div>
+
                 <div className="video-sec">
                 <video className="video" controls autoPlay  onContextMenu={(e) => e.preventDefault()}>
                 <source src="/videos/Eagle.Spirit-1-1 logo.webm" type="video/webm" />

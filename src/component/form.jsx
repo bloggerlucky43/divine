@@ -63,8 +63,8 @@ const Form = () => {
         <form>
           <div className="form-group">
             <input
-              type="date"
-              placeholder="Date of Birth"
+              type="text"
+              placeholder="Date of Birth e.g(mm/dd/yyyy)"
               className="form-control"
               required
               value={dob}

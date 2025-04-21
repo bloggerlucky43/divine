@@ -216,37 +216,36 @@ h1 {
   transition: all 0.4s ease-in-out;
   box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
 }
+
 .gallery img:hover{
   transform: scale(1.1); /* zoom effect on hover */
   box-shadow: 
-    0 0 15px #00f0ff,
-    0 0 25px #1a237e,
-    0 0 40px #00f0ff;
+  0 0 15px #00f0ff,
+  0 0 25px #1a237e,
+  0 0 40px #00f0ff;
 }
 .images-container h1{
   text-align: center;
   margin-bottom: 4vh;
+  text-shadow: 0 0 8px rgba(0, 0, 200, 0.9);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.images-container p{
-  text-align: center;
-  background: none;
-  text-shadow: inherit;
-}
+
 .gallery{
   display: flex;
   padding: 15px;
 }
 .selected{
+  display: inline-block;
   transform: scale(1.1); 
+  transition: all 0.4s ease-in-out;
   box-shadow: 
-    0 0 15px #00f0ff,
-    0 0 25px #1a237e,
-    0 0 40px #00f0ff;
+  0 0 15px #00f0ff,
+  0 0 25px #1a237e,
+  0 0 40px #00f0ff;
 }
 .video-sec{
   display: flex;
-  
   justify-content: space-evenly;
 
 }
