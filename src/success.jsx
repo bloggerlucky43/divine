@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// const bApp = "http://localhost:5000";
-const bApp = "https://divinebackend.onrender.com"
+const bApp = "http://localhost:5000";
+// const bApp = "https://divinebackend.onrender.com"
 
 const SuccessPage = () => {
   const [divineMessage, setDivineMessage] = useState('');

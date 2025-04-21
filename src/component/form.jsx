@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-const bApp="https://divinebackend.onrender.com"
-// const bApp="http://localhost:5000"
+// const bApp="https://divinebackend.onrender.com"
+const bApp="http://localhost:5000"
 
 const stripePromise = loadStripe('pk_test_51OBvIaERzzYl3tbOMxy92GDPsSG8rLcwCfH14GlQQzJbB8QYY5ZSftts9fEz1KI7aJ6iFzgKjdALWLgsiDoUeVOs00hpuBwAdM');
 

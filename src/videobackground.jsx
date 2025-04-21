@@ -1,12 +1,12 @@
 import React ,{useRef}from "react";
 import Form from "./component/form";
 
-// const images=[
-//     {src:"/images/a.jpg" , alt:'beauty'},
-//     {src:"/images/b.jpg" , alt:'Nice'},
-//     {src:"/images/c.jpg" , alt:'Handsome'},
-//     {src:"/images/d.jpg" , alt:'FIne'},
-// ]
+const images=[
+    {src:"/images/a.jpg" , alt:'beauty'},
+    {src:"/images/b.jpg" , alt:'Nice'},
+    {src:"/images/c.jpg" , alt:'Handsome'},
+    {src:"/images/d.jpg" , alt:'FIne'},
+]
 
 const VideoBackground=()=>{
     const formRef=useRef(null);
@@ -41,17 +41,18 @@ const VideoBackground=()=>{
             </div>
             <div className="container next-container" ref={formRef}>
                 <Form />
-            </div>
-            {/* <div className="images-container">
+            <div className="images-container">
                 <h1>Check out some images below</h1>
                 <div className="gallery">
                     {images.map((img,index)=>(
                         <div className="gallery-items">
-                            <img src={img.src} alt={img.alt} />
+                            <img src={img.src} alt={img.alt} onContextMenu={(e) => e.preventDefault()} />
                         </div>
                     ))}
                 </div>
-            </div> */}
+                <p></p>
+            </div>
+            </div>
            
             
         </div>

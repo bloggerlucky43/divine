@@ -25,7 +25,7 @@
   color: white;
   justify-content: center;
   align-items: center;
-  font-family: Arial, sans-serif;
+  font-family: 'Lora', serif;
 }
 .content-nav{
   text-align: center;
@@ -42,7 +42,8 @@
 
 h1 {
   font-size: 3rem;
-  font-weight: 900;
+  font-family: 'Uncial Antiqua', cursive;
+  font-weight: 700;
 }
 .subheading{
   color: #fff;
@@ -51,9 +52,9 @@ h1 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Lora', serif;
   font-weight: 900;
   text-shadow: 0 0 8px rgba(0, 0, 200, 0.6);
-  /* text-shadow: 0 0 8px rgba(0,0,0,1); */
   line-height: 1.6;
   animation: fadeInUp 1.5s ease forwards;
   opacity: 0;
@@ -84,6 +85,7 @@ h1 {
   box-shadow: 0 0 15px rgba(23, 23, 128, 0.4);
   cursor: pointer;
   transition: all 0.5s ease;
+  font-family: 'Lora', serif;
 }
 .start-btn:hover{
   background-color: white;
@@ -111,13 +113,16 @@ h1 {
   margin: 0 auto;
 }
 .form-heading{
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
   font-weight: 400;
+  text-align: center;
   color: whitesmoke;
+  font-family: 'Uncial Antiqua', cursive;;
 }
 .form-group{
   text-align: left;
+  font-family: 'Lora', serif;
   margin-bottom: 20px;
 }
 .form-group label{
@@ -132,6 +137,15 @@ h1 {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
+  box-shadow: 0 0 5px #1e90ff,
+              0 0 10px #1e90ff,
+              0 0 15px #1e90ff;
+  outline: none;
+}
+.form-control:focus{
+  box-shadow: 0 0 10px #1e90ff,
+              0 0 20px #1e90ff,
+              0 0 40px #1e90ff;
 }
 #visual{
   width: 80%;
@@ -184,6 +198,26 @@ h1 {
   justify-self: center;
   margin-bottom: 4vh;
 }
+.images-container{
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  margin-top: 8vh;
+}
+.gallery img{
+  width: 90%;
+}
+.images-container h1{
+  text-align: center;
+  margin-bottom: 4vh;
+}
+.images-container p{
+  margin-top: 10vh;
+}
+.gallery{
+  display: flex;
+}
+
 @media screen and (max-width: 600px) {
   .video-background{
     object-fit: cover;
@@ -196,17 +230,20 @@ h1 {
     align-items: center;
   }
   .form-group{
-    width: 90%;
+    width: 100%;
   }
   .content-nav{
     text-align: center;
   }
   .content-nav h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
+    text-align: center;
     margin-bottom: 2vh;
   }
   .content p{
     width: 80%;
+    line-height: 1.0;
+    font-family: 'Lora', serif;
   }
   .next-container{
     color: #fff;
@@ -237,21 +274,45 @@ h1 {
 
   }
   .start-btn{
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 15px;
     background-color: #1a237e;
     font-size: 1.0rem;
     box-shadow: 0 0 15px rgba(23, 23, 128, 0.4);
   }
   .form-section{
-    padding: 30px 15px;
+    padding: 30px 30px;
     width: 94%;
+    justify-self: center;
+    margin-right: 1vh;
   }
   .form-heading{
     font-weight: 700;
   }
+  .images-container{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    margin-top: 8vh;
+  }
+   .gallery img{
+    width: 100%;
+    margin-bottom: 1vh;
+  }
 
+  .images-container h1{
+    text-align: center;
+    margin-bottom: 4vh;
+  }
+  .images-container p{
+    margin-top: 10vh;
+  }
+  .gallery{
+    display: flex;
+    flex-direction: column;
+  }
 }
+
 @media only screen and (min-width: 768px) and (max-width:1024px) {
   .video-background{
     object-fit: cover;
