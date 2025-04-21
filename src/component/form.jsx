@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-// const bApp="https://divinebackend.onrender.com"
-const bApp="http://localhost:5000"
+const bApp="https://divinebackend.onrender.com"
+// const bApp="http://localhost:5000"
 
 const stripePromise = loadStripe('pk_test_51OBvIaERzzYl3tbOMxy92GDPsSG8rLcwCfH14GlQQzJbB8QYY5ZSftts9fEz1KI7aJ6iFzgKjdALWLgsiDoUeVOs00hpuBwAdM');
 
@@ -62,7 +62,6 @@ const Form = () => {
         <h2 className="form-heading">Reveal Your Divine Insight</h2>
         <form>
           <div className="form-group">
-            <label>Date of Birth</label>
             <input
               type="date"
               placeholder="Date of Birth"
@@ -74,7 +73,6 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Your Name:</label>
             <input
               type="text"
               placeholder="Name for spiritual decoding"
@@ -86,7 +84,6 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Country of Birth</label>
             <input
               type="text"
               className="form-control"
@@ -98,14 +95,13 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Highest Aspiration</label>
             <select
               className="form-control"
               required
               value={desire}
               onChange={(e) => setDesire(e.target.value)}
             >
-              <option value="">Select</option>
+              <option value="">Highest Aspiration</option>
               <option value="love">Love</option>
               <option value="wealth">Wealth</option>
               <option value="spiritual-growth">Spiritual Growth</option>
@@ -114,7 +110,6 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Gender</label>
             <select
               className="form-control"
               required
@@ -128,7 +123,6 @@ const Form = () => {
           </div>
 
           <div className="form-group">
-            <label>Birth Sign</label>
             <select
               className="form-control"
               required
