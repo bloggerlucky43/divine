@@ -59,7 +59,7 @@ const Form = () => {
   return (
     <section className="form-section">
       <div className="container mystic-form">
-        <h2 className="form-heading">Reveal Your Divine Insight</h2>
+        <h2 className="form-heading">Reveal Your Mystic Soul</h2>
         <form>
           <div className="form-group">
             <input
