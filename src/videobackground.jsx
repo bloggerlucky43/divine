@@ -9,6 +9,7 @@ const images=[
 ]
 
 const VideoBackground=()=>{
+
     const formRef=useRef(null);
 
     const handleScrollView=()=>{
@@ -28,10 +29,10 @@ const VideoBackground=()=>{
                     <h1 className="m-xl-3 "><span className="logo">D</span>ivine<span className="logo">M</span>yst</h1>
                 </div>
                 <p className="subheading mt-xl-4">
-  Tap into Your Spirit
+  Tap into Vision
 </p>
                 <p className="subheading mt-xl-4 fs-4">
-                Embrace your ascension
+                Embrace Ascension
 </p>
 <div className="button">
 <button className="start-btn" onClick={handleScrollView}>Awaken Your Spiritual Purpose</button>
@@ -42,13 +43,18 @@ const VideoBackground=()=>{
             <div className="container next-container" ref={formRef}>
                 <Form />
             <div className="images-container">
-                <h1>Experience the Art of Your Inner Self</h1>
+                <h1>Spiritual Travels</h1>
+                <p className="text-image">Come on! Travel!</p>
                 <div className="gallery">
-                    {images.map((img,index)=>(
-                        <div className="gallery-items">
-                            <img src={img.src} alt={img.alt} onContextMenu={(e) => e.preventDefault()} />
-                        </div>
-                    ))}
+                {images.map((img, index) => (
+  <div className="gallery-items" key={index}>
+    <img
+      src={img.src}
+      alt={img.alt}
+      onContextMenu={(e) => e.preventDefault()} />
+  </div>
+))}
+
                 </div>
                 <div className="video-sec">
                 <video className="video" controls autoPlay  onContextMenu={(e) => e.preventDefault()}>
@@ -61,7 +67,6 @@ const VideoBackground=()=>{
             </video>
 
                 </div>
-                <p></p>
             </div>
             </div>
            
