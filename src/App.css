@@ -234,6 +234,20 @@ h1 {
   display: flex;
   padding: 15px;
 }
+.video-sec{
+  display: flex;
+  
+  justify-content: space-evenly;
+
+}
+.video{
+  margin-top: 4vh;
+  border-radius: 8px;
+  border: none;
+  height: 320px;
+  width: 320px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
 
 @media screen and (max-width: 600px) {
   .video-background{
@@ -328,6 +342,22 @@ h1 {
     display: flex;
     flex-direction: column;
   }
+  .video-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 4px;
+  
+  }
+  .video{
+    margin-top: 4vh;
+    border-radius: 8px;
+    border: none;
+    height: 320px;
+    width: 320px;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width:1024px) {
@@ -392,5 +422,6 @@ h1 {
   .form-heading{
     font-weight: 700;
   }
+  
 
 }

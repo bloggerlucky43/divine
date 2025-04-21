@@ -50,6 +50,17 @@ const VideoBackground=()=>{
                         </div>
                     ))}
                 </div>
+                <div className="video-sec">
+                <video className="video" controls loop>
+                <source src="/videos/Eagle.Spirit-1-1 logo.webm" type="video/webm" />
+                Your browser does not support video tag
+            </video>
+                <video className="video" controls loop>
+                <source src="/videos/Ocean.Spirit.webm" type="video/webm" />
+                Your browser does not support video tag
+            </video>
+
+                </div>
                 <p></p>
             </div>
             </div>
