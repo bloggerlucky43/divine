@@ -7,12 +7,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  // server: {
-  //   historyApiFallback: true, // for handling SPA routing
-  //   host: '0.0.0.0',          // Bind to all network interfaces
-  //   port: 10000,              // Ensure the port is set to 10000
-  // },
-  // preview: {
-  //   allowedHosts: ['www.divinemyst.life','divinemyst.life'], // Add your Render host here
-  // }
+  server: {
+    historyApiFallback: true, // for handling SPA routing
+    host: '0.0.0.0',          // Bind to all network interfaces
+    port: 10000,              // Ensure the port is set to 10000
+  },
+  preview: {
+    allowedHosts: ['www.divinemyst.life','divinemyst.life'], // Add your Render host here
+  }
 })
