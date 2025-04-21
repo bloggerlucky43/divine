@@ -42,7 +42,7 @@ const VideoBackground=()=>{
             <div className="container next-container" ref={formRef}>
                 <Form />
             <div className="images-container">
-                <h1>Check out some images below</h1>
+                <h1>Experience the Art of Your Inner Self</h1>
                 <div className="gallery">
                     {images.map((img,index)=>(
                         <div className="gallery-items">

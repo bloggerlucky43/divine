@@ -131,6 +131,7 @@ h1 {
   display: block;
   font-weight: 300;
 }
+
 .form-control{
   width: 100%;
   padding: 10px 15px;
@@ -146,6 +147,12 @@ h1 {
   box-shadow: 0 0 10px #1e90ff,
               0 0 20px #1e90ff,
               0 0 40px #1e90ff;
+}
+.form-group input{
+  border-radius: 50px;
+}
+.form-group select{
+  border-radius: 50px;
 }
 #visual{
   width: 80%;
@@ -216,6 +223,7 @@ h1 {
 }
 .gallery{
   display: flex;
+  padding: 15px;
 }
 
 @media screen and (max-width: 600px) {
