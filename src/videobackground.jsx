@@ -1,16 +1,31 @@
 import React ,{useRef}from "react";
 import Form from "./component/form";
 
-const images=[
-    {src:"/images/a.jpg" , alt:'beauty'},
-    {src:"/images/b.jpg" , alt:'Nice'},
-    {src:"/images/c.jpg" , alt:'Handsome'},
-    {src:"/images/d.jpg" , alt:'FIne'},
-]
 
 const VideoBackground=()=>{
 
     const formRef=useRef(null);
+
+    const images = [
+        '/images/a.jpg',
+        '/images/e.jpg',
+        '/images/f.jpg',
+        '/images/g.jpg',
+        '/images/h.jpg',
+      ];
+    
+      const randomIndex = Math.floor(Math.random() * images.length);
+      const selectedImage = images[randomIndex];
+
+      const secondImage=[
+        '/images/i.jpg',
+        '/images/b.jpg',
+        '/images/c.jpg',
+        '/images/d.jpg',
+      ];
+
+      const randomInd=Math.floor(Math.random() * secondImage.length);
+      const secondSelected=secondImage[randomInd];
 
     const handleScrollView=()=>{
         if(formRef.current){
@@ -28,14 +43,9 @@ const VideoBackground=()=>{
                 <div className="content-nav">
                     <h1 className="m-xl-3 "><span className="logo">D</span>ivine<span className="logo">M</span>yst</h1>
                 </div>
-                <p className="subheading mt-xl-4">
-  Tap into Vision
-</p>
-                <p className="subheading mt-xl-4 fs-4">
-                Embrace Ascension
-</p>
+       
 <div className="button">
-<button className="start-btn" onClick={handleScrollView}>Awaken Your Spiritual Purpose</button>
+<button className="start-btn" onClick={handleScrollView}>Vibrate Your Mystical Spirit</button>
 
 </div>
 
@@ -46,30 +56,24 @@ const VideoBackground=()=>{
                 <h1>Spiritual Travels</h1>
                 
                 <div className="gallery">
-                {images.map((img, index) => (
-  <div className="gallery-items" key={index}>
-    <img
-      src={img.src}
-      alt={img.alt}
-      onContextMenu={(e) => e.preventDefault()}
-      className={`${index === 0 ? "selected" : ""}`}
-      />
-  </div>
-))}
+                    <img src={selectedImage} id="selected" alt="beauty" onContextMenu={(e) => e.preventDefault()} />
 
-                </div>
-
-                <div className="video-sec">
-                <video className="video" controls autoPlay  onContextMenu={(e) => e.preventDefault()}>
+                    <video className="video"  autoPlay loop muted  onContextMenu={(e) => e.preventDefault()}>
                 <source src="/videos/Eagle.Spirit-1-1 logo.webm" type="video/webm" />
                 Your browser does not support video tag
             </video>
-                <video className="video" controls  onContextMenu={(e) => e.preventDefault()}>
+
+                    <img src={secondSelected} alt="beauty" onContextMenu={(e) => e.preventDefault()} />
+                    <video className="video" autoPlay loop   onContextMenu={(e) => e.preventDefault()}>
                 <source src="/videos/Ocean.Spirit.webm" type="video/webm" />
                 Your browser does not support video tag
             </video>
-
+                    {/* <img src="/images/b.jpg" alt="beauty" onContextMenu={(e) => e.preventDefault()} /> */}
                 </div>
+{/* 
+                <div className="video-sec">
+
+                </div> */}
             </div>
             </div>
            

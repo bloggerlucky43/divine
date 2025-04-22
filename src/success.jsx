@@ -144,7 +144,7 @@ const SuccessPage = () => {
             <h3>Your DivineMyst Spirit:</h3>
             <div className="divine-container">
               {imageUrl && (
-                <img src={imageUrl} alt="Divine visual" className="divine" loading="lazy"  onContextMenu={(e) => e.preventDefault()}  />
+                <img src={imageUrl} alt="Divine visual" className="divine" loading="lazy"/>
               )}
               <p>{divineMessage}</p>
               <div className="home-btn">

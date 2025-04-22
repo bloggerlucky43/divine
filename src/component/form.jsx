@@ -63,7 +63,7 @@ const Form = () => {
         <form>
           <div className="form-group">
             <input
-              type="text"
+              type="date"
               placeholder="Date of Birth e.g(mm/dd/yyyy)"
               className="form-control"
               required
