@@ -50,6 +50,57 @@ const SuccessPage = () => {
       });
     };
 
+    //Tiktok Pixel
+    const loadTikTokPixel = () => {
+      if (window.ttq) {
+        ttq.track('CompletePayment', {
+          value: 1.00,
+          currency: 'USD'
+        });
+        return;
+      }
+    
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = w[t] = w[t] || [];
+        ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie"];
+        ttq.setAndDefer = function (t, e) {
+          t[e] = function () {
+            t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+          };
+        };
+        for (var i = 0; i < ttq.methods.length; i++) {
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        }
+    
+        ttq.load = function (e, n) {
+          var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+          ttq._i = ttq._i || {};
+          ttq._i[e] = [];
+          ttq._i[e]._u = i;
+          ttq._t = ttq._t || {};
+          ttq._t[e] = +new Date();
+          ttq._o = ttq._o || {};
+          ttq._o[e] = n || {};
+          var o = d.createElement("script");
+          o.type = "text/javascript";
+          o.async = true;
+          o.src = i + "?sdkid=" + e + "&lib=" + t;
+          var a = d.getElementsByTagName("script")[0];
+          a.parentNode.insertBefore(o, a);
+        };
+    
+        ttq.load('D04B1FJC77U9O1QRMT3G');
+        ttq.page();
+        ttq.track('CompletePayment', {
+          value: 1.00,
+          currency: 'USD'
+        });
+    
+      })(window, document, 'ttq');
+    };
+    
+
     if (sessionId) {
       fetch(`${bApp}/verify-payment?session_id=${sessionId}`)
         .then(res => res.json())
@@ -59,6 +110,7 @@ const SuccessPage = () => {
             setImageUrl(data.imageUrl);
             setIsLoading(false);
             loadMetaPixel();
+            loadTikTokPixel();
           } else {
             alert(data.message || 'Something went wrong.');
             navigate('/');
@@ -148,11 +200,11 @@ const SuccessPage = () => {
               )}
               <p>{divineMessage}</p>
               <div className="home-btn">
-                <button className="start-btn"
+                {/* <button className="start-btn"
                 onClick={handleClickEvent}
                 >
                   Go To HomePage
-                  </button>
+                  </button> */}
               </div>
             </div>
           </div>

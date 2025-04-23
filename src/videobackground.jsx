@@ -70,10 +70,7 @@ const VideoBackground=()=>{
             </video>
                     {/* <img src="/images/b.jpg" alt="beauty" onContextMenu={(e) => e.preventDefault()} /> */}
                 </div>
-{/* 
-                <div className="video-sec">
 
-                </div> */}
             </div>
             </div>
            
