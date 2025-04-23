@@ -127,15 +127,13 @@ const SuccessPage = () => {
   useEffect(() => {
     if (showModal) {
       document.body.style.overflow = "hidden";
-      const timer = setTimeout(() => {
-        setModalClosing(true);
-        setTimeout(() => setShowModal(false), 500);
-      }, 5000);
-
-      return () => clearTimeout(timer);
     } else {
       document.body.style.overflow = "auto";
     }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [showModal]);
 
   const handleCloseModal = () => {
@@ -143,9 +141,6 @@ const SuccessPage = () => {
     setTimeout(() => setShowModal(false), 500);
   };
 
-  const handleClickEvent=()=>{
-    navigate('/')
-  }
 
   return (
     <div className="video-container">
