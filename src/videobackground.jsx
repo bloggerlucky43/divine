@@ -27,6 +27,13 @@ const VideoBackground=()=>{
       const randomInd=Math.floor(Math.random() * secondImage.length);
       const secondSelected=secondImage[randomInd];
 
+      const topImage=[
+        '/aa.jpg',
+        '/ab.jpg'
+      ]
+      const randomTop=Math.floor(Math.random() * topImage.length);
+      const topSelected=topImage[randomTop];
+
     const handleScrollView=()=>{
         if(formRef.current){
             formRef.current.scrollIntoView({behavior:'smooth'});
@@ -43,6 +50,14 @@ const VideoBackground=()=>{
                 <div className="content-nav">
                     <h1 className="m-xl-3 "><span className="logo">D</span>ivine<span className="logo">M</span>yst</h1>
                 </div>
+
+               <div className="image-container">
+               <div className="galleries">
+                    <img src={topSelected} alt="first"  onContextMenu={(e) => e.preventDefault()}  />
+                    <img src="/ad.jpg" alt="sec"  onContextMenu={(e) => e.preventDefault()} />
+                    <img src="/ac.jpg" alt="third"  onContextMenu={(e) => e.preventDefault()} />
+                </div>
+               </div>
        
 <div className="button">
 <button className="start-btn" onClick={handleScrollView}>Vibrate Your Mystical Spirit</button>
