@@ -59,10 +59,6 @@ const VideoBackground=()=>{
                 </div>
                </div>
        
-<div className="button">
-<button className="start-btn" onClick={handleScrollView}>Vibrate Your Mystical Spirit</button>
-
-</div>
 
             </div>
             <div className="container next-container" ref={formRef}>
